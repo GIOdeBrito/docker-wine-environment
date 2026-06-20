@@ -1,0 +1,14 @@
+services:
+  wine-runner:
+    build: .
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+      - ./programs:/programsdir
+      - ./entrypoint.sh:/entrypoint.sh:ro
+    shm_size: 1gb
+    devices:
+      - /dev/dri:/dev/dri  # Enables hardware acceleration (Linux hosts only)
+    stdin_open: true
+    tty: true
