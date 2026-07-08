@@ -4,21 +4,17 @@ printf "ENV VARIABLES:\n"
 env
 
 printf "\n\nUSER: \n"
-
-#whoami
-
-#printf "\n\nRUNNING PROGRAM...\n\n"
-
-#wine notepad.exe
-
-#wine /programsdir/ps/PSCS6.exe
-
-#winecfg
-
-#wine /programsdir/cadaver/Cadaver.exe
+whoami
 
 printf "Setting up aliases"
 
 echo 'alias ll="ls -la"' >> ~/.bashrc
 
+chmod +x /commands/lutris_install.sh
+chmod +x /commands/wine_install.sh
+
 sleep infinity
+
+printf "Container is available for access"
+
+#exec "@"

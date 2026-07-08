@@ -1,3 +1,5 @@
 /programs/**/**
 /wine_data/**/**
+/home_data/**/**
 !/programs/.gitkeep
+!/home_data/.gitkeep
